@@ -22,7 +22,7 @@
   </div>
 
   <main class="container">
-    <section aria-label="Contact">
+    <section class="panel" aria-label="Contact">
       <article class="card page-card contact-card">
         <div class="brand-row">
           <img src="/assets/dino-time/app-icon-for-promo.png" width="1024" height="1024" alt="">
@@ -68,6 +68,19 @@
             <textarea id="message" name="Message" required data-placeholder-nl="Vertel ons wat er speelt" data-placeholder-en="Tell us what is on your mind"></textarea>
           </div>
 
+          <div>
+            <label for="screenshot"><span class="nl">Screenshot</span><span class="en">Screenshot</span></label>
+            <div class="file-slot">
+              <input id="screenshot" name="attachment" type="file" accept="image/*">
+              <label class="file-picker" for="screenshot">
+                <span class="nl">Kies een schermafbeelding</span>
+                <span class="en">Choose a screenshot</span>
+              </label>
+            </div>
+            <p class="file-name" id="file-name"></p>
+            <img class="file-preview" id="file-preview" alt="" hidden>
+          </div>
+
           <button class="btn" type="submit">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
               <path d="m4 7 8 5 8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -109,9 +122,11 @@
           sending: "Sending...",
           success: "Thanks, your message was sent.",
           error: "Something went wrong. Please email us directly at somersjens@gmail.com.",
-          subject: "Dino Time contact form submission"
+          subject: "Dino Time contact form submission",
+          tooBig: "That screenshot is larger than 5 MB. Choose a smaller image."
         }
       };
+      copy.nl.tooBig = "Die screenshot is groter dan 5 MB. Kies een kleinere afbeelding.";
 
       function lang() {
         return document.documentElement.lang === "en" ? "en" : "nl";
@@ -127,6 +142,37 @@
       if (select) select.addEventListener("change", function () { setTimeout(syncHidden, 0); });
       window.addEventListener("hashchange", function () { setTimeout(syncHidden, 0); });
       syncHidden();
+
+      var fileInput = document.getElementById("screenshot");
+      var fileName = document.getElementById("file-name");
+      var preview = document.getElementById("file-preview");
+      var previewUrl = "";
+
+      function clearPreview() {
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        previewUrl = "";
+        preview.hidden = true;
+        preview.removeAttribute("src");
+        fileName.textContent = "";
+      }
+
+      fileInput.addEventListener("change", function () {
+        clearPreview();
+        var file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+        if (file.size > 5 * 1024 * 1024) {
+          fileInput.value = "";
+          statusEl.textContent = copy[lang()].tooBig;
+          return;
+        }
+        statusEl.textContent = "";
+        fileName.textContent = file.name;
+        if (file.type.indexOf("image/") === 0) {
+          previewUrl = URL.createObjectURL(file);
+          preview.src = previewUrl;
+          preview.hidden = false;
+        }
+      });
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -144,6 +190,7 @@
           if (!response.ok) throw new Error("Request failed");
           statusEl.textContent = copy[locale].success;
           form.reset();
+          clearPreview();
           syncHidden();
         }).catch(function () {
           statusEl.textContent = copy[locale].error;
