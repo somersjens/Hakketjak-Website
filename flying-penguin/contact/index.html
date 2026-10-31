@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flying Penguin | Contact</title>
   <meta name="description" content="Neem contact op met Flying Penguin voor feedback, bugs of vragen over het rekenspel.">
-  <meta name="theme-color" content="#6ccf2f">
+  <meta name="theme-color" content="#e8eafa">
   <link rel="icon" type="image/png" href="/assets/flying-penguin/app-icon.png">
-  <link rel="stylesheet" href="/assets/site.css?v=10">
+  <link rel="stylesheet" href="/assets/site.css?v=11">
 </head>
-<body>
+<body class="tone-penguin">
   <div class="language-shell">
     <div class="language-control">
       <div class="language-select-wrap">
@@ -43,8 +43,8 @@
           </div>
           <div>
             <h1><span class="nl">Contact</span><span class="en">Contact</span></h1>
-            <p class="lead nl">Deel feedback, meld een bug of stel een vraag over Flying Penguin. Je bericht gaat rechtstreeks naar <a href="mailto:jens@hakketjak.nl">jens@hakketjak.nl</a>.</p>
-            <p class="lead en">Share feedback, report a bug or ask a question about Flying Penguin. Your message goes straight to <a href="mailto:jens@hakketjak.nl">jens@hakketjak.nl</a>.</p>
+            <p class="lead nl">Deel feedback, meld een bug of stel een vraag over Flying Penguin. Je bericht gaat rechtstreeks naar <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</p>
+            <p class="lead en">Share feedback, report a bug or ask a question about Flying Penguin. Your message goes straight to <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</p>
             <div class="cta">
               <a class="btn" href="/flying-penguin/">Flying Penguin</a>
               <a class="btn secondary" href="/flying-penguin/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
@@ -62,7 +62,7 @@
           <p><span class="nl">Een screenshot of schermopname kan helpen. Controleer vooraf of er geen persoonlijke gegevens zichtbaar zijn.</span><span class="en">A screenshot or screen recording can help. Please check that no personal information is visible before sending it.</span></p>
         </div>
 
-        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/jens%40hakketjak.nl" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/somersjens@gmail.com" method="POST">
           <input type="hidden" name="_subject" id="form-subject" value="Flying Penguin contactformulier">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="Locale" id="form-locale" value="nl">
@@ -126,7 +126,7 @@
       var form = document.getElementById("contact-form");
       var statusEl = document.getElementById("form-status");
       if (!form || !statusEl) return;
-      var copy = {"nl":{"sending":"Versturen...","success":"Dank je, je bericht is verzonden.","error":"Er ging iets mis. Mail ons direct via jens@hakketjak.nl.","subject":"Flying Penguin contactformulier","tooBig":"Die screenshot is groter dan 5 MB. Kies een kleinere afbeelding."},"en":{"sending":"Sending...","success":"Thanks, your message was sent.","error":"Something went wrong. Please email us directly at jens@hakketjak.nl.","subject":"Flying Penguin contact form submission","tooBig":"That screenshot is larger than 5 MB. Choose a smaller image."}};
+      var copy = {"nl":{"sending":"Versturen...","success":"Dank je, je bericht is verzonden.","error":"Er ging iets mis. Mail ons direct via somersjens@gmail.com.","subject":"Flying Penguin contactformulier","tooBig":"Die screenshot is groter dan 5 MB. Kies een kleinere afbeelding."},"en":{"sending":"Sending...","success":"Thanks, your message was sent.","error":"Something went wrong. Please email us directly at somersjens@gmail.com.","subject":"Flying Penguin contact form submission","tooBig":"That screenshot is larger than 5 MB. Choose a smaller image."}};
       function lang() { return document.documentElement.lang === "en" ? "en" : "nl"; }
       function syncHidden() {
         var locale = lang();
