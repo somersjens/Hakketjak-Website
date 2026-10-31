@@ -18,6 +18,22 @@
     return "nl";
   }
 
+  function syncSelectSizers() {
+    document.querySelectorAll(".language-select-wrap select").forEach(function (select) {
+      var wrap = select.parentElement;
+      if (!wrap) return;
+      var sizer = wrap.querySelector(".select-sizer");
+      if (!sizer) {
+        sizer = document.createElement("span");
+        sizer.className = "select-sizer";
+        sizer.setAttribute("aria-hidden", "true");
+        wrap.insertBefore(sizer, select);
+      }
+      var option = select.options[select.selectedIndex];
+      sizer.textContent = option ? option.textContent : "";
+    });
+  }
+
   function applyLocale(locale, updateHash) {
     var lang = locales.indexOf(locale) === -1 ? "nl" : locale;
     document.documentElement.lang = lang;
@@ -34,6 +50,7 @@
     document.querySelectorAll("#app-select option[data-label-nl]").forEach(function (option) {
       option.textContent = option.getAttribute("data-label-" + lang) || option.textContent;
     });
+    syncSelectSizers();
 
     document.querySelectorAll("[data-placeholder-nl]").forEach(function (field) {
       field.placeholder = field.getAttribute("data-placeholder-" + lang) || "";
