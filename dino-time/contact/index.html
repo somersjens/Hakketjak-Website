@@ -7,7 +7,7 @@
   <meta name="description" content="Neem contact op over Dino Time. Je bericht gaat naar somersjens@gmail.com.">
   <meta name="theme-color" content="#6ccf2f">
   <link rel="icon" type="image/png" href="/assets/dino-time/app-icon-for-promo.png">
-  <link rel="stylesheet" href="/assets/site.css?v=4">
+  <link rel="stylesheet" href="/assets/site.css?v=8">
 </head>
 <body>
   <div class="language-shell">
@@ -15,7 +15,7 @@
       <div class="language-select-wrap">
         <select id="app-select" aria-label="App">
           <option value="/" data-label-nl="Alle apps" data-label-en="All apps">Alle apps</option>
-          <option value="/dino-time/" selected>Dino Time</option>
+          <option value="/dino-time/" data-label-nl="Dino Time" data-label-en="Dino Time" selected>Dino Time</option>
         </select>
       </div>
       <div class="language-select-wrap">
@@ -28,18 +28,27 @@
   </div>
 
   <main class="container">
-    <section class="panel" aria-label="Contact">
-      <article class="card page-card contact-card">
-        <div class="brand-row">
-          <img src="/assets/dino-time/app-icon-for-promo.png" width="1024" height="1024" alt="">
-          <span>Dino Time</span>
+    <section aria-label="Contact">
+      <article class="card hero-card">
+        <div class="hero">
+          <div class="icon-wrap">
+            <img src="/assets/dino-time/app-icon-for-promo.png" width="1024" height="1024" alt="Dino Time">
+          </div>
+          <div>
+            <h1><span class="nl">Contact</span><span class="en">Contact</span></h1>
+            <p class="lead nl">Deel feedback, meld een bug of stel een vraag over Dino Time. Je bericht gaat rechtstreeks naar <a class="mail" href="mailto:somersjens@gmail.com?subject=Dino%20Time">somersjens@gmail.com</a>.</p>
+            <p class="lead en">Share feedback, report a bug, or ask a question about Dino Time. Your message goes straight to <a class="mail" href="mailto:somersjens@gmail.com?subject=Dino%20Time">somersjens@gmail.com</a>.</p>
+            <div class="cta">
+              <a class="btn" href="/dino-time/"><span class="nl">Dino Time</span><span class="en">Dino Time</span></a>
+              <a class="btn secondary" href="/dino-time/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
+            </div>
+          </div>
         </div>
-        <header>
-          <h1><span class="nl">Contact</span><span class="en">Contact</span></h1>
-          <p class="lead nl">Deel feedback, meld een bug of stel een vraag over Dino Time. Je bericht gaat rechtstreeks naar <a class="mail" href="mailto:somersjens@gmail.com?subject=Dino%20Time">somersjens@gmail.com</a>.</p>
-          <p class="lead en">Share feedback, report a bug, or ask a question about Dino Time. Your message goes straight to <a class="mail" href="mailto:somersjens@gmail.com?subject=Dino%20Time">somersjens@gmail.com</a>.</p>
-        </header>
+      </article>
+    </section>
 
+    <section class="panel" aria-label="Contactformulier">
+      <article class="card page-card contact-card">
         <div class="info">
           <h2 class="kicker"><span class="nl">Wat handig is om mee te sturen</span><span class="en">What helps us answer</span></h2>
           <p class="nl">Vermeld als het kan je iPhone- of iPad-model, de iOS-versie, de app-versie, het level of de oefening, en wat er gebeurde.</p>

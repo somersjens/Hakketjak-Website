@@ -52,7 +52,7 @@ p, h1, h2, h3 { overflow-wrap: break-word; }
 }
 
 .language-shell {
-  padding: 10px var(--px) 4px;
+  padding: 22px var(--px) 2px;
 }
 
 .language-control {
@@ -120,7 +120,7 @@ p, h1, h2, h3 { overflow-wrap: break-word; }
   text-align: left;
 }
 
-main { padding: 12px 0 8px; }
+main { padding: 4px 0 8px; }
 section { padding: 12px 0; }
 
 .panel {
@@ -500,7 +500,6 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 
 @media (max-width: 720px) {
   .hero-card, .panel, .card { padding: 20px 16px; }
-  .language-shell { padding-top: 8px; }
   .language-control { padding: 8px 14px; }
   .cta { flex-direction: column; align-items: stretch; }
   .btn, .contact-form .btn { width: 100%; }
