@@ -31,6 +31,10 @@
     var select = document.getElementById("language-select");
     if (select) select.value = lang;
 
+    document.querySelectorAll("[data-placeholder-nl]").forEach(function (field) {
+      field.placeholder = field.getAttribute("data-placeholder-" + lang) || "";
+    });
+
     try { window.localStorage.setItem(storageKey, lang); } catch (error) {}
 
     if (updateHash && window.location.hash !== "#" + lang) {
