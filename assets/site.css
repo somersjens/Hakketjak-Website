@@ -340,14 +340,15 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 
 .app-card p { text-align: left; margin: 0; }
 
-.home h1 {
-  max-width: 14em;
-  font-size: clamp(1.9rem, 1.15rem + 2.6vw, 3.2rem);
-  line-height: 1.12;
-  letter-spacing: -0.045em;
+.home-sub {
+  margin: 0 auto;
+  color: rgb(var(--muted));
+  font-size: var(--fs-lead);
+  line-height: 1.35;
+  font-weight: 650;
 }
 
-.home h1 a {
+.home-sub a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
