@@ -70,11 +70,21 @@
     });
   }
 
+  function pageSection() {
+    var path = window.location.pathname;
+    if (/\/contact\/?$/.test(path)) return "contact/";
+    if (/\/privacy\/?$/.test(path)) return "privacy/";
+    return "";
+  }
+
   var appSelect = document.getElementById("app-select");
   if (appSelect) {
     appSelect.addEventListener("change", function () {
       var lang = document.documentElement.lang === "en" ? "en" : "nl";
-      window.location.assign(appSelect.value + "#" + lang);
+      var target = appSelect.value || "/";
+      if (target.slice(-1) !== "/") target += "/";
+      var section = target === "/" ? "" : pageSection();
+      window.location.assign(target + section + "#" + lang);
     });
   }
 
