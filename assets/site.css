@@ -3,8 +3,6 @@
   --background: 240 249 232;
   --ink: 53 85 31;
   --muted: 106 130 89;
-  --line: rgba(var(--primary), 0.24);
-  --line-strong: rgba(var(--primary), 0.42);
   --shadow: 90 143 50;
   --container: 980px;
   --px: clamp(18px, 4vw, 28px);
@@ -85,6 +83,8 @@ html:not([lang="en"]) .en { display: none; }
 html[lang="en"] .nl { display: none; }
 
 body {
+  --line: rgb(var(--ink) / 0.16);
+  --line-strong: rgb(var(--ink) / 0.34);
   min-height: 100%;
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -126,7 +126,7 @@ p, h1, h2, h3 { overflow-wrap: break-word; }
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 30px rgba(var(--shadow), 0.06);
+  box-shadow: 0 12px 30px rgb(var(--shadow) / 0.06);
   color: rgb(var(--primary));
 }
 
@@ -187,7 +187,7 @@ section { padding: 12px 0; }
   border-radius: calc(var(--radius) + 4px);
   background: rgba(255, 255, 255, 0.54);
   padding: clamp(18px, 3vw, 26px);
-  box-shadow: 0 20px 54px rgba(var(--shadow), 0.08);
+  box-shadow: 0 20px 54px rgb(var(--shadow) / 0.08);
   backdrop-filter: blur(12px);
 }
 
@@ -198,7 +198,7 @@ section { padding: 12px 0; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(20px, 3vw, 28px);
-  box-shadow: 0 12px 30px rgba(var(--shadow), 0.06);
+  box-shadow: 0 12px 30px rgb(var(--shadow) / 0.06);
 }
 
 .hero-card { text-align: center; padding: clamp(26px, 4vw, 40px); }
@@ -218,7 +218,7 @@ section { padding: 12px 0; }
   border-radius: 30%;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.28);
-  box-shadow: 0 24px 54px rgba(var(--primary), 0.25), 0 0 0 1px rgba(var(--primary), 0.2);
+  box-shadow: 0 24px 54px rgb(var(--primary) / 0.25), 0 0 0 1px rgb(var(--primary) / 0.2);
 }
 
 .icon-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 30%; }
@@ -256,14 +256,14 @@ h1 {
   min-height: 48px;
   padding: 12px 18px;
   border-radius: 16px;
-  border: 1px solid rgba(var(--primary), 0.96);
+  border: 1px solid rgb(var(--primary) / 0.96);
   background: rgb(var(--primary));
   color: #fff;
   font-size: var(--fs-small);
   font-weight: 850;
   line-height: 1;
   text-decoration: none;
-  box-shadow: 0 14px 28px rgba(var(--primary), 0.28);
+  box-shadow: 0 14px 28px rgb(var(--primary) / 0.28);
 }
 
 .btn:hover { transform: translateY(-1px); }
@@ -272,7 +272,7 @@ h1 {
   background: rgba(255, 255, 255, 0.72);
   color: rgb(var(--primary));
   border-color: var(--line-strong);
-  box-shadow: 0 10px 22px rgba(var(--shadow), 0.05);
+  box-shadow: 0 10px 22px rgb(var(--shadow) / 0.05);
 }
 
 .kicker {
@@ -322,7 +322,7 @@ h1 {
   height: 9px;
   border-radius: 999px;
   background: rgb(var(--primary));
-  box-shadow: 0 0 0 5px rgba(var(--primary), 0.14);
+  box-shadow: 0 0 0 5px rgb(var(--primary) / 0.14);
 }
 
 footer.container { padding-top: 18px; padding-bottom: 34px; }
@@ -344,7 +344,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
   color: rgb(var(--primary));
   font-weight: 820;
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--primary), 0.4);
+  border-bottom: 1px solid rgb(var(--primary) / 0.4);
 }
 
 .app-grid {
@@ -372,7 +372,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
   aspect-ratio: 1;
   border-radius: 22%;
   object-fit: cover;
-  box-shadow: 0 18px 40px rgba(var(--shadow), 0.14);
+  box-shadow: 0 18px 40px rgb(var(--shadow) / 0.14);
 }
 
 .app-card h2 {
@@ -505,7 +505,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
   font: inherit;
   font-size: var(--fs-body);
   line-height: 1.45;
-  box-shadow: 0 8px 18px rgba(var(--shadow), 0.035);
+  box-shadow: 0 8px 18px rgb(var(--shadow) / 0.035);
   appearance: none;
 }
 .file-slot { position: relative; width: 100%; }
@@ -548,7 +548,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(var(--muted), 0.72);
+  color: rgb(var(--muted) / 0.72);
 }
 .contact-form .btn {
   width: 100%;
@@ -582,7 +582,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 .mail { font-weight: 850; }
 
 :focus-visible {
-  outline: 3px solid rgba(var(--primary), 0.76);
+  outline: 3px solid rgb(var(--primary) / 0.76);
   outline-offset: 3px;
   border-radius: 10px;
 }
