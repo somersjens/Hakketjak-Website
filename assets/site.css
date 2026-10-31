@@ -99,6 +99,30 @@ body.tone-forget {
   --shadow: 51 95 153;
 }
 
+body.tone-honey {
+  --primary: 176 98 28;
+  --background: 251 243 230;
+  --ink: 92 58 24;
+  --muted: 146 110 72;
+  --shadow: 160 96 36;
+}
+
+body.tone-steps {
+  --primary: 14 122 148;
+  --background: 230 248 250;
+  --ink: 22 70 84;
+  --muted: 70 118 132;
+  --shadow: 30 122 148;
+}
+
+body.tone-lion {
+  --primary: 166 116 12;
+  --background: 252 246 220;
+  --ink: 90 70 18;
+  --muted: 144 122 62;
+  --shadow: 158 118 24;
+}
+
 * { box-sizing: border-box; }
 
 html {

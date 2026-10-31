@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl" style="background-color:#e6f8fa;color-scheme:light" data-title-nl="Math Steps | Spelenderwijs leren rekenen" data-title-en="Math Steps | Learn maths through play" data-description-nl="Math Steps maakt rekenen spannend op een glazen brug: kies uit 3 antwoordstenen, leer van je valpartijen, gebruik checkpoints en bereik het winnaarseiland binnen de tijd." data-description-en="Math Steps turns maths into a glass-bridge challenge: choose from 3 answer stones, learn from your falls, use checkpoints, and reach the winner island before time runs out.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Steps | Spelenderwijs leren rekenen</title>
+  <meta name="description" content="Math Steps maakt rekenen spannend op een glazen brug: kies uit 3 antwoordstenen, leer van je valpartijen, gebruik checkpoints en bereik het winnaarseiland binnen de tijd.">
+  <meta name="theme-color" content="#e6f8fa">
+  <link rel="icon" type="image/png" href="/assets/math-steps/app-icon.png">
+  <link rel="stylesheet" href="/assets/site.css?v=21">
+</head>
+<body class="tone-steps">
+  <div class="language-shell">
+    <div class="language-control">
+      <div class="language-select-wrap">
+        <select id="app-select" aria-label="App">
+          <option value="/" data-label-nl="Alle apps" data-label-en="All apps">Alle apps</option>
+          <option value="/buzzkill/" data-label-nl="Buzzkill" data-label-en="Buzzkill">Buzzkill</option>
+          <option value="/happy-five/" data-label-ar="خمس أشياء جميلة" data-label-bn="পাঁচটি ভালো জিনিস" data-label-ca="Cinc Coses Bones" data-label-zh-hans="每天五件好事" data-label-zh-hant="每天五件好事" data-label-hr="Pet Lijepih Stvari" data-label-cs="Pět Hezkých Věcí" data-label-da="Fem Gode Ting" data-label-nl="Happy Five" data-label-en-gb="Happy Five" data-label-en-us="Happy Five" data-label-fil="Limang Magandang Bagay" data-label-fi="Viisi Hyvää Asiaa" data-label-fr="Cinq Bonnes Choses" data-label-fr-ca="Cinq Bonnes Choses" data-label-de="Fünf Glücksmomente" data-label-el="Πέντε Καλές Στιγμές" data-label-he="חמישה דברים טובים" data-label-hi="पाँच अच्छी बातें" data-label-hu="Öt Jó Dolog" data-label-id="Lima Hal Baik" data-label-it="Cinque Cose Belle" data-label-ja="毎日いいこと五つ" data-label-ko="다섯 가지 좋은 일" data-label-ms="Lima Perkara Baik" data-label-nb="Fem Gode Ting" data-label-pl="Pięć Dobrych Rzeczy" data-label-pt-br="Cinco Coisas Boas" data-label-pt-pt="Cinco Coisas Boas" data-label-ro="Cinci Lucruri Bune" data-label-ru="Пять Хороших Вещей" data-label-sr="Pet Dobrih Stvari" data-label-sk="Päť Pekných Vecí" data-label-sl="Pet Lepih Stvari" data-label-es-mx="Cinco Cosas Buenas" data-label-es-es="Cinco Cosas Buenas" data-label-sv="Fem Bra Saker" data-label-ta="ஐந்து நல்ல விஷயங்கள்" data-label-th="ห้าสิ่งดีๆ" data-label-tr="Beş Güzel Şey" data-label-uk="П’ять Добрих Речей" data-label-vi="Năm Điều Tốt" data-label-en="Happy Five">Happy Five</option>
+          <option value="/forget-it/" data-label-nl="Forget It" data-label-en="Forget It">Forget It</option>
+          <option value="/jumping-fox/" data-label-nl="Jumping Fox" data-label-en="Jumping Fox">Jumping Fox</option>
+          <option value="/hungry-frog/" data-label-nl="Hungry Frog" data-label-en="Hungry Frog">Hungry Frog</option>
+          <option value="/number-reef/" data-label-nl="Number Reef" data-label-en="Number Reef">Number Reef</option>
+          <option value="/king-crab/" data-label-nl="King Crab" data-label-en="King Crab">King Crab</option>
+          <option value="/flying-penguin/" data-label-nl="Flying Penguin" data-label-en="Flying Penguin">Flying Penguin</option>
+          <option value="/nut-grab/" data-label-nl="Nut Grab" data-label-en="Nut Grab">Nut Grab</option>
+          <option value="/rabbit-hole/" data-label-nl="Rabbit Hole" data-label-en="Rabbit Hole">Rabbit Hole</option>
+          <option value="/dino-time/" data-label-nl="Dino Time" data-label-en="Dino Time">Dino Time</option>
+          <option value="/honey-slide/" data-label-nl="Honey Slide" data-label-en="Honey Slide">Honey Slide</option>
+          <option value="/math-steps/" selected data-label-nl="Math Steps" data-label-en="Math Steps">Math Steps</option>
+          <option value="/space-lion/" data-label-nl="Space Lion" data-label-en="Space Lion">Space Lion</option>
+        </select>
+      </div>
+      <div class="language-select-wrap">
+        <select id="language-select" aria-label="Taal">
+          <option value="nl">🇳🇱 Nederlands</option>
+          <option value="en">🇬🇧 English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section aria-label="Math Steps">
+      <article class="card hero-card">
+        <div class="hero">
+          <div class="icon-wrap">
+            <img src="/assets/math-steps/app-icon.png" width="1024" height="1024" alt="Math Steps app-icoon" data-alt-nl="Math Steps app-icoon" data-alt-en="Math Steps app icon">
+          </div>
+          <div>
+            <h1>Math Steps</h1>
+            <p class="lead"><span class="nl">Reken goed. Spring verder. Je bent een hond op een glazen brug. In iedere ronde kies je uit drie antwoordstenen. Spring op de juiste steen om verder te komen, leer van eerdere valpartijen en probeer binnen de tijd het winnaarseiland te bereiken.</span><span class="en">Solve carefully. Jump farther. You are a dog crossing a glass bridge. Each round gives you three answer stones. Jump on the correct one to keep moving, learn from previous falls, and try to reach the winner island before time runs out.</span></p>
+            <div class="cta">
+              <a class="btn secondary" href="/math-steps/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
+              <a class="btn secondary" href="/math-steps/contact/"><span class="nl">Contact</span><span class="en">Contact</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 class="kicker" id="features-title"><span><span class="nl">Zo speel en leer je</span><span class="en">How you play and learn</span></span></h2>
+      <div class="stack">
+        <article class="card">
+          <div class="title-row"><h3><span><span class="nl">1) Kies wat je wilt oefenen</span><span class="en">1) Choose what to practise</span></span></h3></div>
+          <p><span class="nl">Oefen optellen, aftrekken, vermenigvuldigen, delen, procenten of alles door elkaar. Kies zelf het soort sommen en een level dat past bij jouw niveau.</span><span class="en">Practise addition, subtraction, multiplication, division, percentages, or mix everything together. Choose the type of maths and a level that matches your ability.</span></p>
+        </article>
+        <article class="card">
+          <div class="title-row"><h3><span><span class="nl">2) Kies uit 3 antwoordstenen</span><span class="en">2) Choose from 3 answer stones</span></span></h3></div>
+          <p><span class="nl">Bij iedere ronde verschijnen 3 antwoordstenen op de glazen brug. Spring je op het juiste antwoord, dan blijft de glasplaat heel en ga je verder. Kies je verkeerd, dan breekt de plaat en val je naar beneden.</span><span class="en">Each round shows 3 answer stones on the glass bridge. Jump on the correct answer and the glass stays intact so you can continue. Choose the wrong one and the panel breaks beneath you.</span></p>
+        </article>
+        <article class="card">
+          <div class="title-row"><h3><span><span class="nl">3) Leer van waar je eerder viel</span><span class="en">3) Learn from where you fell</span></span></h3></div>
+          <p><span class="nl">Na een fout antwoord kom je met de lift weer omhoog. Je ziet duidelijk op welke glasplaat je eerder bent gevallen, zodat je weet waar je extra goed moet opletten en het deze keer beter kunt doen.</span><span class="en">After a wrong answer, the lift brings you back up. You can clearly see which glass panel broke before, so you know exactly where to pay extra attention and get it right this time.</span></p>
+        </article>
+        <article class="card">
+          <div class="title-row"><h3><span><span class="nl">4) Bereik het winnaarseiland</span><span class="en">4) Reach the winner island</span></span></h3></div>
+          <p><span class="nl">Aan het einde van de brug wacht een winnaarseiland dat je binnen de tijd moet bereiken. Om te voorkomen dat je na een late fout helemaal opnieuw moet beginnen, is er bij elke 10e stap een checkpoint waar de lift je weer terugbrengt.</span><span class="en">A winner island waits at the end of the bridge, and you need to reach it before time runs out. To stop one late mistake from sending you all the way back, every 10th step acts as a checkpoint where the lift can return you.</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="why-title">
+      <h2 class="kicker" id="why-title"><span><span class="nl">Steeds verder over de brug</span><span class="en">Keep moving across the bridge</span></span></h2>
+      <div class="card">
+        <ul class="facts">
+          <li class="fact nl">Begin met eenvoudige sommen en kies moeilijkere levels wanneer je meer uitdaging wilt.</li>
+          <li class="fact en">Start with easier calculations and choose more difficult levels when you want a bigger challenge.</li>
+          <li class="fact nl">Kies één rekentype of mix verschillende soorten sommen door elkaar.</li>
+          <li class="fact en">Choose one maths type or mix different kinds of questions together.</li>
+          <li class="fact nl">Drie antwoordstenen per ronde houden iedere sprong overzichtelijk, maar je moet goed blijven rekenen.</li>
+          <li class="fact en">Three answer stones per round keep each jump clear, but accurate calculation still matters.</li>
+          <li class="fact nl">Na een fout kom je met de lift terug en zie je waar je eerder door het glas bent gevallen.</li>
+          <li class="fact en">After a mistake, the lift brings you back and the broken glass shows where you fell before.</li>
+          <li class="fact nl">Speel in totaal 10 karakters vrij en ontdek verschillende winnaarseilanden in eigen thema’s.</li>
+          <li class="fact en">Unlock a total of 10 characters and discover different themed winner islands as you progress.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="premium-title">
+      <h2 class="kicker" id="premium-title"><span><span class="nl">Val, leer en bereik de overkant</span><span class="en">Fall, learn, and reach the other side</span></span></h2>
+      <div class="card">
+        <p><span class="nl">Math Steps combineert rekenen, geheugen en timing in korte uitdagingen. Elke fout laat zien waar je extra moet opletten, checkpoints houden de voortgang spannend en het winnaarseiland geeft ieder level een duidelijk doel.</span><span class="en">Math Steps combines maths, memory, and timing in short challenges. Every mistake shows where to pay extra attention, checkpoints keep progress moving, and the winner island gives each level a clear goal.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <div>© 2026 <a href="/">Hakketjak</a> · Math Steps</div>
+      <nav class="links" aria-label="Math Steps">
+        <a href="/math-steps/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
+        <a href="/math-steps/contact/"><span class="nl">Contact</span><span class="en">Contact</span></a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/site.js?v=6"></script>
+</body>
+</html>
