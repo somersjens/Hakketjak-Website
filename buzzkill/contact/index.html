@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nl" data-title-nl="Buzzkill | Contact" data-title-en="Buzzkill | Contact" data-description-nl="Neem contact op met Buzzkill voor feedback, bugs of vragen." data-description-en="Contact Buzzkill to share feedback, report a bug or ask a question.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buzzkill | Contact</title>
+  <meta name="description" content="Neem contact op met Buzzkill voor feedback, bugs of vragen.">
+  <meta name="theme-color" content="#faf6e8">
+  <link rel="icon" type="image/png" href="/assets/buzzkill/app-icon.png">
+  <link rel="stylesheet" href="/assets/site.css?v=16">
+</head>
+<body class="tone-buzz">
+  <div class="language-shell">
+    <div class="language-control">
+      <div class="language-select-wrap">
+        <select id="app-select" aria-label="App">
+          <option value="/" data-label-nl="Alle apps" data-label-en="All apps">Alle apps</option>
+          <option value="/dino-time/" data-label-nl="Dino Time" data-label-en="Dino Time">Dino Time</option>
+          <option value="/jumping-fox/" data-label-nl="Jumping Fox" data-label-en="Jumping Fox">Jumping Fox</option>
+          <option value="/hungry-frog/" data-label-nl="Hungry Frog" data-label-en="Hungry Frog">Hungry Frog</option>
+          <option value="/number-reef/" data-label-nl="Number Reef" data-label-en="Number Reef">Number Reef</option>
+          <option value="/king-crab/" data-label-nl="King Crab" data-label-en="King Crab">King Crab</option>
+          <option value="/flying-penguin/" data-label-nl="Flying Penguin" data-label-en="Flying Penguin">Flying Penguin</option>
+          <option value="/nut-grab/" data-label-nl="Nut Grab" data-label-en="Nut Grab">Nut Grab</option>
+          <option value="/rabbit-hole/" data-label-nl="Rabbit Hole" data-label-en="Rabbit Hole">Rabbit Hole</option>
+          <option value="/buzzkill/" selected data-label-nl="Buzzkill" data-label-en="Buzzkill">Buzzkill</option>
+          <option value="/happy-five/" data-label-nl="Happy Five" data-label-en="Happy Five">Happy Five</option>
+          <option value="/forget-it/" data-label-nl="Forget It" data-label-en="Forget It">Forget It</option>
+        </select>
+      </div>
+      <div class="language-select-wrap">
+        <select id="language-select" aria-label="Taal">
+          <option value="nl" selected>🇳🇱 Nederlands</option>
+          <option value="en">🇬🇧 English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <main class="container">
+    <section aria-label="Buzzkill">
+      <article class="card hero-card">
+        <div class="hero">
+          <div class="icon-wrap">
+            <img src="/assets/buzzkill/app-icon.png" width="1024" height="1024" alt="Buzzkill" data-alt-nl="Buzzkill" data-alt-en="Buzzkill">
+          </div>
+          <div>
+            <h1><span class="nl">Contact</span><span class="en">Contact</span></h1>
+            <p class="lead"><span class="nl">Deel feedback, meld een bug of stel een vraag over Buzzkill. Je bericht gaat rechtstreeks naar <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</span><span class="en">Share feedback, report a bug, or ask a question about Buzzkill. Your message goes straight to <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</span></p>
+            <div class="cta">
+              <a class="btn" href="/buzzkill/">Buzzkill</a>
+              <a class="btn secondary" href="/buzzkill/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="panel" aria-label="Contact">
+      <article class="card page-card contact-card">
+        <div class="info">
+          <h2 class="kicker"><span><span class="nl">Wat handig is om mee te sturen</span><span class="en">What to include</span></span></h2>
+          <p><span class="nl">Vermeld, als het kan, je toestelmodel, iOS-versie en een korte beschrijving van wat je verwachtte.</span><span class="en">Adding your device model, iOS version, and a short description of what you expected helps us respond quickly.</span></p>
+          <p><span class="nl">Liever je eigen mailapp? Mail ons direct via <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</span><span class="en">Prefer your own client? Email us directly at <a class="mail" href="mailto:somersjens@gmail.com">somersjens@gmail.com</a>.</span></p>
+        </div>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/somersjens@gmail.com" method="POST">
+          <input type="hidden" name="_subject" id="form-subject" value="Buzzkill contactformulier">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="Locale" id="form-locale" value="nl">
+          <input class="hp" type="text" name="_honey" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <div>
+            <label for="name"><span><span class="nl">Je naam</span><span class="en">Your name</span></span></label>
+            <input id="name" name="Name" type="text" autocomplete="name" required data-placeholder-nl="Hoe mogen we je aanspreken?" data-placeholder-en="How should we address you?">
+          </div>
+          <div>
+            <label for="email"><span><span class="nl">Je e-mailadres</span><span class="en">Your email</span></span></label>
+            <input id="email" name="Email" type="email" autocomplete="email" required data-placeholder-nl="jij@example.com" data-placeholder-en="you@example.com">
+          </div>
+          <div>
+            <label for="subject"><span><span class="nl">Onderwerp</span><span class="en">Subject</span></span></label>
+            <input id="subject" name="Subject" type="text" required data-placeholder-nl="Waar gaat het over?" data-placeholder-en="What is this about?">
+          </div>
+          <div>
+            <label for="message"><span><span class="nl">Bericht</span><span class="en">Message</span></span></label>
+            <textarea id="message" name="Message" required data-placeholder-nl="Vertel ons wat er speelt" data-placeholder-en="Tell us what’s on your mind"></textarea>
+          </div>
+          <div>
+            <label for="screenshot"><span class="nl">Screenshot (optioneel)</span><span class="en">Screenshot (optional)</span></label>
+            <div class="file-slot">
+              <input id="screenshot" name="attachment" type="file" accept="image/*">
+              <label class="file-picker" for="screenshot"><span class="nl">Kies een schermafbeelding</span><span class="en">Choose a screenshot</span></label>
+            </div>
+            <p class="file-name" id="file-name"></p>
+            <img class="file-preview" id="file-preview" alt="" hidden>
+          </div>
+          <button class="btn" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20"><path d="m4 7 8 5 8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 17h16V7H4v10Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span class="nl">Bericht versturen</span><span class="en">Send message</span>
+          </button>
+          <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer class="container">
+    <div class="footer">
+      <div>© 2026 <a href="/">Hakketjak</a> · Buzzkill</div>
+      <nav class="links" aria-label="Buzzkill">
+        <a href="/buzzkill/">Buzzkill</a>
+        <a href="/buzzkill/privacy/"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
+        <a href="/buzzkill/contact/"><span class="nl">Contact</span><span class="en">Contact</span></a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/site.js?v=6"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var statusEl = document.getElementById("form-status");
+      if (!form || !statusEl) return;
+      var copy = {"nl":{"sending":"Versturen...","success":"Dank je, je bericht is verzonden.","error":"Er ging iets mis. Mail ons direct via somersjens@gmail.com.","subject":"Buzzkill contactformulier","tooBig":"Die screenshot is groter dan 5 MB. Kies een kleinere afbeelding."},"en":{"sending":"Sending...","success":"Thanks, your message was sent.","error":"Something went wrong. Please email us directly at somersjens@gmail.com.","subject":"Buzzkill contact form submission","tooBig":"That screenshot is larger than 5 MB. Choose a smaller image."}};
+      function lang() { return document.documentElement.lang || "en"; }
+      function strings() { return copy[lang()] || copy.en || copy["en-gb"] || copy["en-us"]; }
+      function syncHidden() {
+        var locale = lang();
+        document.getElementById("form-locale").value = locale;
+        document.getElementById("form-subject").value = strings().subject;
+      }
+      var select = document.getElementById("language-select");
+      if (select) select.addEventListener("change", function () { setTimeout(syncHidden, 0); });
+      window.addEventListener("hashchange", function () { setTimeout(syncHidden, 0); });
+      syncHidden();
+      var fileInput = document.getElementById("screenshot");
+      var fileName = document.getElementById("file-name");
+      var preview = document.getElementById("file-preview");
+      var previewUrl = "";
+      function clearPreview() {
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        previewUrl = "";
+        preview.hidden = true;
+        preview.removeAttribute("src");
+        fileName.textContent = "";
+      }
+      fileInput.addEventListener("change", function () {
+        clearPreview();
+        var file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+        if (file.size > 5 * 1024 * 1024) {
+          fileInput.value = "";
+          statusEl.textContent = strings().tooBig;
+          return;
+        }
+        statusEl.textContent = "";
+        fileName.textContent = file.name;
+        if (file.type.indexOf("image/") === 0) {
+          previewUrl = URL.createObjectURL(file);
+          preview.src = previewUrl;
+          preview.hidden = false;
+        }
+      });
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        syncHidden();
+        var pack = strings();
+        var button = form.querySelector("button");
+        statusEl.textContent = pack.sending;
+        button.disabled = true;
+        fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) })
+          .then(function (response) {
+            if (!response.ok) throw new Error("Request failed");
+            statusEl.textContent = pack.success;
+            form.reset();
+            clearPreview();
+            syncHidden();
+          })
+          .catch(function () { statusEl.textContent = pack.error; })
+          .then(function () { button.disabled = false; });
+      });
+    })();
+  </script>
+</body>
+</html>
