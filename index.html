@@ -7,7 +7,7 @@
   <meta name="description" content="Easy to use iOS apps, built by Jens Somers.">
   <meta name="theme-color" content="#f4f5f7">
   <link rel="icon" type="image/png" href="/assets/dino-time/app-icon-for-promo.png">
-  <link rel="stylesheet" href="/assets/site.css?v=16">
+  <link rel="stylesheet" href="/assets/site.css?v=17">
 </head>
 <body class="home">
   <div class="language-shell">
@@ -15,6 +15,9 @@
       <div class="language-select-wrap">
         <select id="app-select" aria-label="App">
           <option value="/" selected data-label-nl="Alle apps" data-label-en="All apps">Alle apps</option>
+          <option value="/buzzkill/" data-label-nl="Buzzkill" data-label-en="Buzzkill">Buzzkill</option>
+          <option value="/happy-five/" data-label-ar="خمس أشياء جميلة" data-label-bn="পাঁচটি ভালো জিনিস" data-label-ca="Cinc Coses Bones" data-label-zh-hans="每天五件好事" data-label-zh-hant="每天五件好事" data-label-hr="Pet Lijepih Stvari" data-label-cs="Pět Hezkých Věcí" data-label-da="Fem Gode Ting" data-label-nl="Happy Five" data-label-en-gb="Happy Five" data-label-en-us="Happy Five" data-label-fil="Limang Magandang Bagay" data-label-fi="Viisi Hyvää Asiaa" data-label-fr="Cinq Bonnes Choses" data-label-fr-ca="Cinq Bonnes Choses" data-label-de="Fünf Glücksmomente" data-label-el="Πέντε Καλές Στιγμές" data-label-he="חמישה דברים טובים" data-label-hi="पाँच अच्छी बातें" data-label-hu="Öt Jó Dolog" data-label-id="Lima Hal Baik" data-label-it="Cinque Cose Belle" data-label-ja="毎日いいこと五つ" data-label-ko="다섯 가지 좋은 일" data-label-ms="Lima Perkara Baik" data-label-nb="Fem Gode Ting" data-label-pl="Pięć Dobrych Rzeczy" data-label-pt-br="Cinco Coisas Boas" data-label-pt-pt="Cinco Coisas Boas" data-label-ro="Cinci Lucruri Bune" data-label-ru="Пять Хороших Вещей" data-label-sr="Pet Dobrih Stvari" data-label-sk="Päť Pekných Vecí" data-label-sl="Pet Lepih Stvari" data-label-es-mx="Cinco Cosas Buenas" data-label-es-es="Cinco Cosas Buenas" data-label-sv="Fem Bra Saker" data-label-ta="ஐந்து நல்ல விஷயங்கள்" data-label-th="ห้าสิ่งดีๆ" data-label-tr="Beş Güzel Şey" data-label-uk="П’ять Добрих Речей" data-label-vi="Năm Điều Tốt" data-label-en="Happy Five">Happy Five</option>
+          <option value="/forget-it/" data-label-nl="Forget It" data-label-en="Forget It">Forget It</option>
           <option value="/dino-time/" data-label-nl="Dino Time" data-label-en="Dino Time">Dino Time</option>
           <option value="/jumping-fox/" data-label-nl="Jumping Fox" data-label-en="Jumping Fox">Jumping Fox</option>
           <option value="/hungry-frog/" data-label-nl="Hungry Frog" data-label-en="Hungry Frog">Hungry Frog</option>
@@ -23,9 +26,6 @@
           <option value="/flying-penguin/" data-label-nl="Flying Penguin" data-label-en="Flying Penguin">Flying Penguin</option>
           <option value="/nut-grab/" data-label-nl="Nut Grab" data-label-en="Nut Grab">Nut Grab</option>
           <option value="/rabbit-hole/" data-label-nl="Rabbit Hole" data-label-en="Rabbit Hole">Rabbit Hole</option>
-          <option value="/buzzkill/" data-label-nl="Buzzkill" data-label-en="Buzzkill">Buzzkill</option>
-          <option value="/happy-five/" data-label-nl="Happy Five" data-label-en="Happy Five">Happy Five</option>
-          <option value="/forget-it/" data-label-nl="Forget It" data-label-en="Forget It">Forget It</option>
         </select>
       </div>
       <div class="language-select-wrap">
@@ -45,7 +45,38 @@
       </article>
     </section>
 
-    <section aria-label="Apps">
+    <section class="home-group" aria-labelledby="productivity-title">
+      <h2 id="productivity-title"><span class="nl">Productiviteit en welzijn</span><span class="en">Productivity &amp; Wellbeing</span></h2>
+      <ul class="app-grid">
+        <li>
+          <a class="card app-card" href="/buzzkill/">
+            <img src="/assets/buzzkill/app-icon.png?v=2" width="845" height="845" alt="">
+            <h2>Buzzkill<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
+            <p class="nl">Blijf bewust terwijl je scrolt. Buzzkill herinnert je in de apps die je tijd stelen.</p>
+            <p class="en">Stay aware while you scroll. Buzzkill nudges you in the apps that steal time.</p>
+          </a>
+        </li>
+        <li>
+          <a class="card app-card" href="/happy-five/">
+            <img src="/assets/happy-five/app-icon.png" width="1024" height="1024" alt="">
+            <h2>Happy Five<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
+            <p class="nl">Vijf dingen per dag waar je van genoot. Een gewoonte die optelt.</p>
+            <p class="en">Five things you enjoyed each day. A habit that adds up.</p>
+          </a>
+        </li>
+        <li>
+          <a class="card app-card" href="/forget-it/">
+            <img src="/assets/forget-it/app-icon.png" width="1024" height="1024" alt="">
+            <h2>Forget It<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
+            <p class="nl">Schrijf in je kalender, plan herhalingen en orden je taken.</p>
+            <p class="en">Write in your calendar, plan repeats, and keep tasks clear.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="home-group" aria-labelledby="education-title">
+      <h2 id="education-title"><span class="nl">Educatie voor kinderen</span><span class="en">Education for children</span></h2>
       <ul class="app-grid">
         <li>
           <a class="card app-card" href="/dino-time/">
@@ -109,30 +140,6 @@
             <h2>Rabbit Hole<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
             <p class="nl">Help het konijn in zijn graafmachine zoveel mogelijk wortels te verzamelen.</p>
             <p class="en">Help the rabbit in his digging machine collect as many carrots as possible.</p>
-          </a>
-        </li>
-        <li>
-          <a class="card app-card" href="/buzzkill/">
-            <img src="/assets/buzzkill/app-icon.png" width="1024" height="1024" alt="">
-            <h2>Buzzkill<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
-            <p class="nl">Blijf bewust terwijl je scrolt. Buzzkill herinnert je in de apps die je tijd stelen.</p>
-            <p class="en">Stay aware while you scroll. Buzzkill nudges you in the apps that steal time.</p>
-          </a>
-        </li>
-        <li>
-          <a class="card app-card" href="/happy-five/">
-            <img src="/assets/happy-five/app-icon.png" width="1024" height="1024" alt="">
-            <h2>Happy Five<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
-            <p class="nl">Vijf dingen per dag waar je van genoot. Een gewoonte die optelt.</p>
-            <p class="en">Five things you enjoyed each day. A habit that adds up.</p>
-          </a>
-        </li>
-        <li>
-          <a class="card app-card" href="/forget-it/">
-            <img src="/assets/forget-it/app-icon.png" width="1024" height="1024" alt="">
-            <h2>Forget It<svg class="app-card-go" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></h2>
-            <p class="nl">Schrijf in je kalender, plan herhalingen en orden je taken.</p>
-            <p class="en">Write in your calendar, plan repeats, and keep tasks clear.</p>
           </a>
         </li>
       </ul>

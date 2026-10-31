@@ -439,6 +439,17 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
   border-bottom: 1px solid rgb(var(--primary) / 0.4);
 }
 
+.home-group h2 {
+  margin: 2px 2px 14px;
+  color: rgb(var(--ink));
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 850;
+}
+
+.home-group + .home-group { padding-top: 10px; }
+
 .app-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
