@@ -366,7 +366,7 @@ h1 {
 .btn:hover { transform: translateY(-1px); }
 
 .btn.secondary {
-  background: rgba(255, 255, 255, 0.72);
+  background: #fff;
   color: rgb(var(--primary));
   border-color: var(--line-strong);
   box-shadow: 0 10px 22px rgb(var(--shadow) / 0.05);
@@ -497,6 +497,13 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 
 .app-card p { text-align: left; margin: 0; }
 
+.app-card p.app-meta {
+  color: rgb(var(--muted));
+  font-size: var(--fs-small);
+  line-height: 1.35;
+  font-weight: 750;
+}
+
 .home-sub {
   margin: 0 auto;
   color: rgb(var(--muted));
@@ -514,6 +521,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
 
 @media (min-width: 721px) {
   .home-break { display: none; }
+  .hero .cta { flex-wrap: nowrap; }
 }
 
 .brand-row {
