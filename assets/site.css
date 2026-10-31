@@ -478,7 +478,7 @@ footer.container { padding-top: 18px; padding-bottom: 34px; }
   width: 100%;
   height: auto;
   aspect-ratio: 1;
-  border-radius: 22%;
+  border-radius: 30%;
   object-fit: cover;
   box-shadow: 0 18px 40px rgb(var(--shadow) / 0.14);
 }
