@@ -31,6 +31,10 @@
     var select = document.getElementById("language-select");
     if (select) select.value = lang;
 
+    document.querySelectorAll("#app-select option[data-label-nl]").forEach(function (option) {
+      option.textContent = option.getAttribute("data-label-" + lang) || option.textContent;
+    });
+
     document.querySelectorAll("[data-placeholder-nl]").forEach(function (field) {
       field.placeholder = field.getAttribute("data-placeholder-" + lang) || "";
     });
@@ -46,6 +50,14 @@
   if (select) {
     select.addEventListener("change", function (event) {
       applyLocale(event.target.value, true);
+    });
+  }
+
+  var appSelect = document.getElementById("app-select");
+  if (appSelect) {
+    appSelect.addEventListener("change", function () {
+      var lang = document.documentElement.lang === "en" ? "en" : "nl";
+      window.location.assign(appSelect.value + "#" + lang);
     });
   }
 
