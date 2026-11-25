@@ -14,14 +14,15 @@
   }
 
   function englishLocale(supported) {
-    if (supported.indexOf("en") !== -1) return "en";
-    if (supported.indexOf("en-gb") !== -1) return "en-gb";
-    if (supported.indexOf("en-us") !== -1) return "en-us";
+    var order = ["en", "en-gb", "en-us", "en-ca", "en-au"];
+    for (var i = 0; i < order.length; i++) {
+      if (supported.indexOf(order[i]) !== -1) return order[i];
+    }
     return supported[0] || "en";
   }
 
   function isEnglish(locale) {
-    return locale === "en" || locale === "en-gb" || locale === "en-us";
+    return locale === "en" || locale.indexOf("en-") === 0;
   }
 
   function resolveLocale(locale, supported) {
@@ -64,6 +65,18 @@
       add("en");
       add("en-gb");
       add("en-us");
+      add("en-ca");
+      add("en-au");
+    }
+    if (primary === "zh") {
+      var traditional = full.indexOf("hant") !== -1 || /(^|-)(tw|hk|mo)(-|$)/.test(full);
+      if (traditional) {
+        add("zh-hant");
+        add("zh-hans");
+      } else {
+        add("zh-hans");
+        add("zh-hant");
+      }
     }
     return list;
   }
@@ -106,7 +119,16 @@
       || element.getAttribute(prefix + "en")
       || element.getAttribute(prefix + "en-gb")
       || element.getAttribute(prefix + "en-us")
+      || element.getAttribute(prefix + "en-ca")
+      || element.getAttribute(prefix + "en-au")
       || "";
+  }
+
+  function hasPrefix(element, prefix) {
+    for (var i = 0; i < element.attributes.length; i++) {
+      if (element.attributes[i].name.indexOf(prefix) === 0) return true;
+    }
+    return false;
   }
 
   function applyLocale(locale, updateHash) {
@@ -126,19 +148,28 @@
     var select = document.getElementById("language-select");
     if (select && supported.indexOf(lang) !== -1) select.value = lang;
 
-    document.querySelectorAll("#app-select option[data-label-en], #app-select option[data-label-nl]").forEach(function (option) {
+    document.querySelectorAll("#app-select option").forEach(function (option) {
+      if (!hasPrefix(option, "data-label-")) return;
       var label = textFrom(option, "data-label-", lang);
       if (label) option.textContent = label;
     });
 
-    document.querySelectorAll("[data-placeholder-en], [data-placeholder-nl], [data-placeholder-en-gb]").forEach(function (field) {
+    document.querySelectorAll("input, textarea").forEach(function (field) {
+      if (!hasPrefix(field, "data-placeholder-")) return;
       var placeholder = textFrom(field, "data-placeholder-", lang);
       if (placeholder) field.placeholder = placeholder;
     });
 
-    document.querySelectorAll("img[data-alt-en], img[data-alt-nl], img[data-alt-en-gb]").forEach(function (image) {
+    document.querySelectorAll("img").forEach(function (image) {
+      if (!hasPrefix(image, "data-alt-")) return;
       var alt = textFrom(image, "data-alt-", lang);
       if (alt) image.alt = alt;
+    });
+
+    document.querySelectorAll("[aria-label]").forEach(function (element) {
+      if (!hasPrefix(element, "data-aria-label-")) return;
+      var aria = textFrom(element, "data-aria-label-", lang);
+      if (aria) element.setAttribute("aria-label", aria);
     });
 
     syncSelectSizers();
